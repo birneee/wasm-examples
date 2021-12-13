@@ -18,6 +18,6 @@
         call $fd_write
         drop ;; drop number of bytes written
     )
-    (export "_start" (func $main))
+    (start $main)
     (export "memory" (memory $memory))
 )
