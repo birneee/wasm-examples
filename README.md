@@ -1,4 +1,4 @@
-# WASM Playground
+# WASM Examples
 
 ## Requirements
 - [WABT](https://github.com/webassembly/wabt)
