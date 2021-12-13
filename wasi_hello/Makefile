@@ -3,4 +3,4 @@ hello.wasm: hello.wat
 
 .PHONY: run
 run:
-	wavmtime hello.wasm
+	wasmtime hello.wasm
