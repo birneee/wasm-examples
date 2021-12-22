@@ -1,26 +1,28 @@
 (module
+    ;; use no additional locals
     (func $pow2
         (param $base i32) 
         (param $exponent i32) 
         (result i32) 
-        i32.const 1
+        i32.const 1 ;; result = 1
         (loop $main 
             (param i32) ;; result
             (result i32) ;; result
             get_local $exponent
             i32.const 0
-            i32.gt_u
+            i32.gt_u ;; exponent > 0
             (if 
                 (param i32) ;; result
                 (result i32) ;; result
                 (then
                     get_local $exponent
                     i32.const 1
-                    i32.sub
+                    i32.sub ;; exponent - 1
                     set_local $exponent
                     get_local $base
-                    i32.mul
+                    i32.mul ;; result = result * base
                     br $main))))
+    ;; use only locals
     (func $pow 
         (param $base i32) 
         (param $exponent i32) 
