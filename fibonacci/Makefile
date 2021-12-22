@@ -1,6 +1,6 @@
 fib.wasm: fib.wat
-	wat2wasm fib.wat -o fib.wasm
+	wat2wasm fib.wat
 
 .PHONY: run
 run:
-	deno run --allow-read fib.js
+	deno run --allow-read=fib.wasm fib.js

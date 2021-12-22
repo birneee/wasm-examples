@@ -1,5 +1,5 @@
 hello.wasm: hello.wat
-	wat2wasm hello.wat -o hello.wasm
+	wat2wasm hello.wat
 
 .PHONY: run
 run:
